@@ -72,14 +72,14 @@ def compMove():
     for i in possibleMoves:
         if i in [1, 3, 7, 9]:
             cornersOpen.append(i)
-    if len(cornersOpen) > 0:
-        move = selectRandom(cornersOpen)
-        return move
-
     if 5 in possibleMoves:
         move = 5
         return move
-
+        
+    if len(cornersOpen) > 0:
+        move = selectRandom(cornersOpen)
+        return move
+        
     edgesOpen = []
     for i in possibleMoves:
         if i in [2, 4, 6, 8]:
